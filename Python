@@ -1,0 +1,16 @@
+a = 0
+y = int(input("Enter a number for the range: ")) 
+x = randrange(0, y)
+z = int(log2(y)) 
+print(f"You have {z} guesses.")
+for i in range(z):
+   g = int(input(f"Guess the number between 0 and {y}: "))
+   if g == x: 
+       print("You have guessed the correct number.")
+       break
+   elif g > x: 
+       print("The Number is lower.")
+       i += 1
+   elif g < x:
+       print("The Number is higher.")
+       i += 1
